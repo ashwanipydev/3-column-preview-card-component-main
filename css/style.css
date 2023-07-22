@@ -1,0 +1,181 @@
+@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&family=Lexend+Deca&display=swap');
+
+/*
+  1. Use a more-intuitive box-sizing model.
+*/
+*, *::before, *::after {
+    box-sizing: border-box;
+  }
+  /*
+    2. Remove default margin
+  */
+  * {
+    margin: 0;
+  }
+  /*
+    Typographic tweaks!
+    3. Add accessible line-height
+    4. Improve text rendering
+  */
+  body {
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+  }
+  /*
+    5. Improve media defaults
+  */
+  img, picture, video, canvas, svg {
+    display: block;
+    max-width: 100%;
+  }
+  /*
+    6. Remove built-in form typography styles
+  */
+  input, button, textarea, select {
+    font: inherit;
+  }
+  /*
+    7. Avoid text overflows
+  */
+  p, h1, h2, h3, h4, h5, h6 {
+    overflow-wrap: break-word;
+  }
+  /*
+    8. Create a root stacking context
+  */
+  #root, #__next {
+    isolation: isolate;
+  }
+
+  :root{
+    --bg-orange: hsl(31, 77%, 52%);
+    --bg-dark-cyan: hsl(184, 100%, 22%);
+    --bg-very-dark-cyan: hsl(179, 100%, 13%);
+    --col-para-white: hsla(0, 0%, 100%, 0.75);
+    --main-bg-col: hsl(0, 0%, 95%);
+    --main-heading-col: hsl(0, 0%, 95%);
+    --main-btn-col: hsl(0, 0%, 95%);
+    --ff-title: 'Big Shoulders Display', cursive;
+    --ff-neutral: 'Lexend Deca', sans-serif;
+  }
+
+  body{
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: var(--main-bg-col);
+    font-size: 15px;
+  }
+
+  .container{
+    display: flex;
+    max-width: 700px;
+    border-radius: 1rem;
+  }
+
+  .card{
+    padding: 2.5rem 2.1rem;
+    max-width: 234px;
+    }
+
+    .card img{
+        margin-bottom: 2rem;
+    }
+
+    .title{
+        color: var(--main-heading-col);
+        font-family: var(--ff-title);
+        font-size: 1.75rem;
+        font-weight: 700;
+        margin-bottom: 1.75rem;
+    }
+
+    .para{
+        color: var(--col-para-white);
+        font-family: var(--ff-neutral);
+        font-size: .75rem;
+        opacity: 75%;
+        margin-bottom: 5rem;
+    }
+
+    .btn{
+        border-radius: 1rem;
+        border: none;
+        background-color: var(--main-btn-col);
+        padding: .5rem 1.75rem;
+        cursor: pointer;
+        font-size: .76rem;
+        font-weight: 400;
+        font-family: var(--ff-neutral);
+    }
+    #sedans{
+        color: var(--bg-orange);
+    }
+    #suvs{
+        color: var(--bg-dark-cyan);
+    }
+    #luxury{
+        color: var(--bg-very-dark-cyan);
+    }
+
+    #sedans:hover {
+        background: var(--bg-orange); 
+        color: white ;
+        border: 1px solid white;
+      }
+    #suvs:hover {
+        background: var(--bg-dark-cyan); 
+        color: white ;
+        border: 1px solid white;
+      }
+    #luxury:hover {
+        background: var(--bg-very-dark-cyan); 
+        color: white ;
+        border: 1px solid white;
+      }
+
+    .sedans{
+        background-color: var(--bg-orange);
+        border-radius: 1rem 0 0 1rem;
+    }
+
+    .suvs{
+        background-color: var(--bg-dark-cyan);
+    }
+
+    .luxury{
+        background-color: var(--bg-very-dark-cyan);
+        border-radius: 0 1rem 1rem 0;
+    }
+
+
+@media (max-width: 700px){
+    .container{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        max-width: 100%;
+        border-radius: 10px;
+        padding: 2rem;
+      }
+    
+    .card{
+        padding: 2.5rem 2.1rem;
+        max-width: 80%;
+        }
+    .card img{
+        margin-bottom: 1.5rem;
+    }
+    
+    .para{
+        margin-bottom: 1rem;
+    }
+    .sedans{
+        border-radius: 10px 10px 0 0;
+      }
+    .luxury{
+        border-radius: 0 0 10px 10px;
+    }
+}
